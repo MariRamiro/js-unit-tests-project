@@ -11,6 +11,19 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-const average = () => {};
+const average = (array) => {
+  const arrayValidation = (array) =>{
+    if ((isNaN(array)) || (array === [ ])) {
+      throw new Error(`undefined`);
+    }
+  };
+
+  try {
+    arrayValidation(array);
+    return ((Math.round(array))/array.length);
+  } catch (error) {
+    return error.message;
+  }
+};
 
 module.exports = average;
