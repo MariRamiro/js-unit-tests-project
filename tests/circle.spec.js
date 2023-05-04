@@ -25,16 +25,16 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contendo os valores esperados', () => {
     // fail('Teste vazio!');
     expect(circle('a')).toBeUndefined();
-
-    expect(circle(1)).toMatchObject({radius: 1, area: 3.14, circumference: 6.28});
-
-    // ? expect(circle()).objectContaining(object.radius, object.area, object.circumference);
-
-    expect(circle( )).toBeUndefined();
-    
-    expect(circle('a')).toBeUndefined();
-    expect(circle('a')).toBeUndefined();
-    expect(circle('a')).toBeUndefined();
+    expect(Object).toBeCloseTo({radius: 1, area: 3.14, circumference: 6.28});
+    expect(circle(radius)).toContainEqual(expect.objectContaining({
+      x : expect.any(Number), 
+      y : expect.any(Number), 
+      z : expect.any(Number),
+    }));
+    expect(circle(' ')).toBeUndefined();
+    expect(Object.keys(object)).toBeCloseTo({radius: 2, circumference: 12.56 });
+    expect(Object.keys(object)).toBeCloseTo({radius: 3, area: 12.14 });
+    expect(Object).toBeCloseTo({radius: 3, area: 28.26, circumference: 18.84});
 
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.
@@ -46,4 +46,3 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // Teste se a função retorna, em um objeto, os dados corretos de um círculo de raio 3.
   });
 });
-
