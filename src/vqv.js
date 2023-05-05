@@ -43,6 +43,8 @@
 // };
 
 const vqv = (name, age) => {
+let nome = name;
+
   if (typeof name !== 'string' || name === ' '){ return undefined; }
   
   if (typeof age !== 'number' || age === ' ') { return undefined; }
