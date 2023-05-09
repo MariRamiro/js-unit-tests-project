@@ -36,8 +36,8 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect(typeof product).toBe('function');
     expect(product).toHaveReturned('array');
     expect(product).toHaveLength(2);
-    expect(productDetails).toContainEqual(expect.arrayContaining([{a,b},{c,d}]));
-    expect(productDetails('Alcool gel', 'Máscara')).toHaveReturned([{x}, {y}]);
+    expect(product).toContainEqual(expect.arrayContaining([{a,b},{c,d}]));
+    expect(product).toHaveReturned([{x}, {y}]);
     expect (x.productId).toMatch('123');
     expect (y.productId).toMatch('123');
   });

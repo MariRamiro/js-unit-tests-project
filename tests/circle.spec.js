@@ -23,7 +23,7 @@ const circle = require('../src/circle');
 
 describe('4 - Implemente os casos de teste para a função `circle`', () => {
   it('Verifica se ao receber um raio, a função `circle` retorna um objeto contendo os valores esperados', () => {
-    // fail('Teste vazio!');
+    fail('Teste vazio!');
     expect(circle('a')).toBeUndefined();
     expect(Object).toBeCloseTo({radius: 1, area: 3.14, circumference: 6.28});
     expect(circle(radius)).toContainEqual(expect.objectContaining({

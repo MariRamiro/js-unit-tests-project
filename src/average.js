@@ -27,7 +27,8 @@
 // };
 
 const average = (array) => {
-  if ((Number.isNaN(array)) || (array === [ ])) { return undefined; }
+  if ((Number.isNaN(array)) || (array === [])) { 
+    return undefined; }
   
   return ((Math.round(array)) / array.length);
 };
