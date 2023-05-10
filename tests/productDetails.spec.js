@@ -12,9 +12,7 @@ const productDetails = require('../src/productDetails');
   // Retorna:
   [
     {
-      name: 'Alcool gel'
-      details: {
-        productId: 'Alcool gel123'
+      productDetails('Alcool gel', 'Máscara')
       }
     },
     {
@@ -42,7 +40,7 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     expect (y.productId).toMatch('123');
   });
   
-
+  
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se productDetails é uma função.
     // Teste se o retorno da função é um array.
