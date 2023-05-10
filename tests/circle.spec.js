@@ -26,7 +26,7 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // fail('Teste vazio!');
     expect(circle('a')).toBeUndefined();
     expect(typeof circle(1)).toBe('object');
-    expect(circle(radius)).toContainEqual(expect.objectContaining({
+    expect(circle(1)).toContainEqual(expect.objectContaining({
       x : expect.any('number'), 
       y : expect.any('number'), 
       z : expect.any('number'),

@@ -43,12 +43,12 @@
 // };
 
 const vqv = (name, age) => {
-  if (typeof name === undefined){
+  if (typeof name === 'undefined') {
     return undefined; 
-  }if (typeof age === undefined){
+  } if (typeof age === 'undefined') {
     return undefined;
   }
-  return `Oi, meu nome é ${name}!\nTenho ${age} anos,
+  return `Oi, meu nome é ${name}!\n Tenho ${age} anos,
   trabalho na Trybe e mando muito em programação!\n#VQV!`;
 };
 

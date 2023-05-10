@@ -16,13 +16,11 @@
 */
 
 const createStudent = (name) => {
-
   if (typeof name !== 'string' || name === ' ') { throw Error; }
 
   const feedback = () => 'Eita pessoa boa!';
   
   return { name, feedback };
- 
 };
 
 module.exports = createStudent;

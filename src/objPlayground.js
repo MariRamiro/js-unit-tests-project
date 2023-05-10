@@ -35,14 +35,13 @@
 */
 
 const calculator = (number1, number2) => {
-  const calc = {
-  sum : number1 + number2,
-  mult : number1 * number2,
-  div : Math.floor(number1 / number2),
-  sub : number1 - number2,
+  const sum = number1 + number2;
+  const mult = number1 * number2;
+  const div = Math.floor(number1 / number2);
+  const sub = number1 - number2;
+  const calc = { sum, mult, div, sub };
+    return calc;
   };
-  return calc;
-};
 
 const arrayGenerator = (type, object) => Object[type](object);
 

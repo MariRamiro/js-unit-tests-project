@@ -27,13 +27,14 @@
 // };
 
 const average = (array) => {
-  for(let index = 0; index < array.length; index += 1)
+  let count = 0;
   if (array === []) { 
     return undefined; 
-  } if (array[index] === 'number') {
-    let count = 0;
-    count += array[index];
-    }
+  } if (typeof array === 'number') {
+    array.forEach((element) => {
+      count += element;
+    });
+  }
   return (Math.round(count / array.length));
 };
 
