@@ -10,10 +10,8 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     expect(menu.consumption).toEqual([]);
     expect(menu.order).toHaveReturnedWith('function');
     expect(menu.order('Beer')).toHaveReturned('Item indisponível');
-    
+
   });
 });
 
 // expect(arrayGenerator('keys', { chave: 'valor' })).toEqual([ 'chave' ]);
-
-expect(createMenu({ food: {}, drinks: {} }).calledwith({ food: {}, drinks: {} }).toBe(true))

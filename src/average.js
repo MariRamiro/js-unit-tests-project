@@ -27,10 +27,14 @@
 // };
 
 const average = (array) => {
-  if ((Number.isNaN(array)) || (array === [])) { 
-    return undefined; }
-  
-  return ((Math.round(array)) / array.length);
+  for(let index = 0; index < array.length; index += 1)
+  if (array === []) { 
+    return undefined; 
+  } if (array[index] === 'number') {
+    let count = 0;
+    count += array[index];
+    }
+  return (Math.round(count / array.length));
 };
 
 module.exports = average;

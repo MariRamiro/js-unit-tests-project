@@ -41,7 +41,7 @@ const calculator = (number1, number2) => {
   div : Math.floor(number1 / number2),
   sub : number1 - number2,
   };
-  return { sum: sum, mult: mult, div: div, sub: sub };
+  return calc;
 };
 
 const arrayGenerator = (type, object) => Object[type](object);

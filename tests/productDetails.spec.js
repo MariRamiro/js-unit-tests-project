@@ -31,11 +31,11 @@ const productDetails = require('../src/productDetails');
 
 describe('6 - Implemente os casos de teste para a função `productDetails`', () => {
   it('Verifica se a função `productDetails` tem o comportamento esperado', () => {
-    fail('Teste vazio!');
+    // fail('Teste vazio!');
     const product = productDetails('Alcool gel', 'Máscara');
-    expect(typeof product).toBe('function');
-    expect(product).toHaveReturned('array');
-    expect(product).toHaveLength(2);
+    expect(typeof productDetails).toEqual('function');
+    expect(productDetails('Alcool gel', 'Máscara')).toHaveLength(2);
+    expect(typeof Object.values(productDetails('Alcool gel', 'Máscara'))).toBe('object');
     expect(product).toContainEqual(expect.arrayContaining([{a,b},{c,d}]));
     expect(product).toHaveReturned([{x}, {y}]);
     expect (x.productId).toMatch('123');

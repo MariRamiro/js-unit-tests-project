@@ -17,7 +17,7 @@ const numbers = require('../src/numbers');
 
 describe('2 - Implemente os casos de teste para a função `numbers`', () => {
   it('Verifica se a função `numbers` retorna `true` quando o array contém apenas números e falso caso contrário', () => {
-    expect(average([1, 2, 3, 4, 5])).toBeTruthy();
+    expect(average([1, 2, 3, 4, 5])).toBe(true);
     expect(average([1, 2, '3', 4, 5])).toBeFalsy();
     expect(average([1, 'a', 3,])).toBeFalsy();
     expect(average([' '])).toBeFalsy();
