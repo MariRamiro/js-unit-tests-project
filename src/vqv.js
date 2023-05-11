@@ -42,14 +42,16 @@
 //   }
 // };
 
-const vqv = (name, age) => {
-  if (typeof name === 'undefined') {
+const vqv = (string, number) => {
+  if (!string) {
     return undefined; 
-  } if (typeof age === 'undefined') {
+  } if (!number) {
     return undefined;
   }
-  return `Oi, meu nome é ${name}!\n Tenho ${age} anos,
-  trabalho na Trybe e mando muito em programação!\n#VQV!`;
+return `Oi, meu nome é ${string}!
+Tenho ${number} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
 };
 
 module.exports = vqv;

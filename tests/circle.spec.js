@@ -26,15 +26,11 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // fail('Teste vazio!');
     expect(circle('a')).toBeUndefined();
     expect(typeof circle(1)).toBe('object');
-    expect(circle(1)).toContainEqual(expect.objectContaining({
-      x : expect.any('number'), 
-      y : expect.any('number'), 
-      z : expect.any('number'),
-    }));
+    expect(Object.keys(circle(1)).length).toBe(3);
     expect(circle(' ')).toBeUndefined();
-    expect(Object.keys(object)).toBeCloseTo({radius: 2, circumference: 12.56 });
-    expect(Object.keys(object)).toBeCloseTo({radius: 3, area: 12.14 });
-    expect(Object).toBeCloseTo({radius: 3, area: 28.26, circumference: 18.84});
+    expect(Object.values(circle(2))[2]).toBeCloseTo(12.56);
+    expect(Object.values(circle(3))[1]).toBeCloseTo(28.26);
+    expect(circle(3)).toEqual({radius: 3, area: 28.259999999999998, circumference: 18.84});
 
     // ESCREVA SEUS TESTES ABAIXO:
     // Teste se circle retorna undefined, caso o parâmetro passado não seja um número.

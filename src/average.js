@@ -11,31 +11,24 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
-// const average = (array) => {
-//   const arrayValidation = (array) =>{
-//     if ((isNaN(array)) || (array === [ ])) {
-//       throw new Error(`undefined`);
-//     }
-//   };
-
-//   try {
-//     arrayValidation(array);
-//     return ((Math.round(array))/array.length);
-//   } catch (error) {
-//     return error.message;
-//   }
-// };
-
 const average = (array) => {
   let count = 0;
-  if (array === []) { 
-    return undefined; 
-  } if (typeof array === 'number') {
-    array.forEach((element) => {
-      count += element;
-    });
-  }
-  return (Math.round(count / array.length));
-};
+  const arrayValidation = () => {
+    if (array.length === 0) {
+      return undefined;
+    } if (array === undefined) {
+      return undefined;
+    }
+    for (const number of array) { 
+      if (typeof number !== 'number') {
+        return undefined;
+      }
+    count += number;
+    }
+    return count;
+  };
 
+  let media = arrayValidation() / array.length;
+    return Math.round(media);
+};
 module.exports = average;
