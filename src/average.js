@@ -12,11 +12,9 @@
 */
 
 const average = (array) => {
-  let count = 0;
   const arrayValidation = () => {
+    let count = 0;
     if (array.length === 0) {
-      return undefined;
-    } if (array === undefined) {
       return undefined;
     }
     for (const number of array) { 
@@ -27,8 +25,10 @@ const average = (array) => {
     }
     return count;
   };
-
+  if (arrayValidation() === undefined) {
+    return undefined;
+  }
   let media = arrayValidation() / array.length;
-    return Math.round(media);
+  return Math.round(media);
 };
 module.exports = average;
