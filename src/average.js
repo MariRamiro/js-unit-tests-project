@@ -10,25 +10,26 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
-
-const average = (array) => {
-  const arrayValidation = () => {
-    let count = 0;
-    if (array.length === 0) {
+const arrayValidation = (array1) => {
+  let count = 0;
+  if (array1.length === 0) {
+    return undefined;
+  }
+  for (const number of array1) { 
+    if (typeof number !== 'number') {
       return undefined;
     }
-    for (const number of array) { 
-      if (typeof number !== 'number') {
-        return undefined;
-      }
-    count += number;
-    }
-    return count;
-  };
+  count += number;
+  }
+  return count;
+};
+
+const average = (array) => {
   if (arrayValidation() === undefined) {
     return undefined;
   }
   let media = arrayValidation() / array.length;
   return Math.round(media);
 };
+
 module.exports = average;
